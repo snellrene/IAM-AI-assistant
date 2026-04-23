@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IAM AI Assistant</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #0f62fe;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Cards */
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #0f62fe;
+    }
+
+    /* Restart Button */
+    .restart-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      padding: 10px 15px;
+      background: #0f62fe;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <div class="navbar">🔐 IAM AI Assistant</div>
+
+  <!-- Hero Section -->
+
+  <div class="hero">
+    <h1>Identity & Access Management Support</h1>
+    <p>Ask questions about MFA, SSO, Conditional Access, and IAM issues.</p>
+  </div>
+
+  <!-- Features -->
+
+  <div class="container">
+    <div class="card">
+      <h3>MFA Support</h3>
+      <p>Get help with multi-factor authentication setup.</p>
+    </div>
+
+<div class="card">
+  <h3>SSO Issues</h3>
+  <p>Troubleshoot single sign-on login problems.</p>
+</div>
+
+<div class="card">
+  <h3>Access Requests</h3>
+  <p>Learn how to request system access securely.</p>
+</div>
+
+
+  </div>
+
+  
+  <script>
+    function restartChat() {
+      if (window.watsonAssistantChatInstance) {
+        window.watsonAssistantChatInstance.restartConversation();
+      }
+    }
+  </script>
+
+  <!-- Watson Chat -->
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "097af449-808e-493c-8efe-9641179532ae",
+      region: "au-syd",
+      serviceInstanceID: "016752ba-9bb3-43a8-89da-0ae83ee3c70f",
+      showRestartButton: true,
+
+      onLoad: function(instance) {
+        window.watsonAssistantChatInstance = instance;
+        instance.render();
+      }
+    };
+
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+</html>
