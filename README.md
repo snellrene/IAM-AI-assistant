@@ -1,4 +1,4 @@
 https://snellrene.github.io/IAM-AI-assistant/
 
+<img width="100" height="100" alt="logo" src="https://github.com/user-attachments/assets/def8377a-d65a-41fc-b144-f40be21e35cd" />
 
-<img width="1254" height="1254" alt="logo" src="https://github.com/user-attachments/assets/a3dfb5df-bce7-4b81-940d-ab8a9f742107" />
